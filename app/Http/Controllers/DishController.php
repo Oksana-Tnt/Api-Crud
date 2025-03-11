@@ -10,9 +10,6 @@ use Illuminate\Support\Facades\Storage;
 
 class DishController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
         $dishes = Dish::all();
@@ -20,9 +17,6 @@ class DishController extends Controller
     }
 
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         $validated = $request->validate([
@@ -51,9 +45,6 @@ class DishController extends Controller
         return response()->json($dish, 201);
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(int $id)
     {
         $dish = Dish::find($id);
@@ -66,9 +57,6 @@ class DishController extends Controller
     }
 
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, int $id)
     {
         // Find the dish by ID or fail
@@ -116,9 +104,6 @@ class DishController extends Controller
             ->header('Cache-Control', 'no-store, no-cache, must-revalidate, post-check=0, pre-check=0');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(int $id)
     {
         $dish = Dish::find($id);
