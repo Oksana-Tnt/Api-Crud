@@ -14,16 +14,16 @@ services:
       - key: APP_DEBUG
         value: false
       - key: APP_KEY
-        value: base64:your_generated_key
+        value: base64:ART6rI6G30DOQ9pyg4nRoeu97kJjU9KTc5RbVQ0lNEo=
       - key: DB_CONNECTION
         value: pgsql
       - key: DB_HOST
-        value: your_render_db_host
+        value: dpg-cv86g2in91rc73cgdou0-a
       - key: DB_PORT
         value: 5432
       - key: DB_DATABASE
-        value: your_render_db_name
+        value: api_crud_ristorante
       - key: DB_USERNAME
-        value: your_render_db_user
+        value: api_crud_ristorante_user
       - key: DB_PASSWORD
-        value: your_render_db_password
+        value: IWBjJGeadmt2oVruJgMAHuaYgZDqN65M
